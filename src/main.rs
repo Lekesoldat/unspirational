@@ -12,7 +12,7 @@ use std::fs::File;
 #[derive(Serialize, Deserialize)]
 struct Quote {
     quote: String,
-    by: String,
+    by: Option<String>,
 }
 
 #[get("/quote")]
