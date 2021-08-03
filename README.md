@@ -18,3 +18,13 @@ Make all commit messages a random Unspirational quote.
 ```zsh
 $ git config --global alias.pain !git commit -m \"$(curl -s unspirational.herokuapp.com/quote | jq -r '.quote')\"
 ```
+
+<h4>Intended workflow:</h4>
+
+```zsh
+$ git add .
+$ git pain
+$ git push
+
+Profit ✅
+```
