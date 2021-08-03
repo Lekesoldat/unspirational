@@ -13,6 +13,9 @@ $ curl unspirational.herokuapp.com/quote
 ```
 
 <h3>Advanced Git Power User</h3>
+
+> Make sure you have 'jq' installed.
+
 Make all commit messages a random Unspirational quote.
 
 ```zsh
