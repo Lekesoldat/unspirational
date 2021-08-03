@@ -12,7 +12,6 @@ use std::fs::File;
 #[derive(Serialize, Deserialize)]
 struct Quote {
     quote: String,
-    by: Option<String>,
 }
 
 #[get("/quote")]
@@ -25,13 +24,7 @@ fn quote(quotes: &State<Vec<Quote>>) -> Json<&Quote> {
 #[launch]
 fn rocket() -> _ {
     let file = File::open("unspirational.json").unwrap();
-    let mut quotes: Vec<Quote> = serde_json::from_reader(file).unwrap();
-
-    for quote in &mut quotes {
-        if let None = quote.by {
-            quote.by = Some("Unknown".to_owned());
-        }
-    }
+    let quotes: Vec<Quote> = serde_json::from_reader(file).unwrap();
 
     rocket::build()
         .manage(quotes)
