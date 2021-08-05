@@ -1,5 +1,3 @@
-<p align="center"><img src="assets/images/icon.png" alt="Sangbok Logo" height="50px" /></p>
-
 <h1 align="center">
    Unspirational
 </h1>
